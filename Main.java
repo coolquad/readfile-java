@@ -24,41 +24,16 @@ public class Main
 {
 	public static void main(String[] args) {
 		System.out.println("D:\\doc.txt");
-// 		File inFile = new File("C:\\Users\\erikI\\downloads\\doc.txt");
-// 		List<Integer> list=new ArrayList<Integer>(); //declaring a list
-//         InputStream ins = null; // raw byte-stream
-//         Reader r = null; // cooked reader
-//         BufferedReader br = null; // buffered for readLine()
-//         try {
-//             String s;
-//             ins = new FileInputStream(inFile);
-//             r = new InputStreamReader(ins, "UTF-8"); // leave charset out for default
-//             br = new BufferedReader(r);
-//             while ((s = br.readLine()) != null) {
-//               list.add(Integer.parseInt(s));
-//             }
-//         }
-//         catch (Exception e)
-//         {
-//           System.err.println(e.getMessage()); // handle exception
-//         }
-        
-//         System.out.println(ins);
-//         Path currentRelativePath = Paths.get("");
-// String ss = currentRelativePath.toAbsolutePath().toString();
-// System.out.println("Current relative path is: " + ss);
-        ArrayList<String> list = new ArrayList<String>();
-        try{
-            Scanner s = new Scanner(new File("D:\\doc.txt"));
-                
-                while (s.hasNext()){
-                    list.add(s.next());
-                }
-                s.close();
-        }catch(Exception e){
-            System.err.println(e.getMessage());
-        }
-        
-        System.out.println(list);
+	ArrayList<String> list = new ArrayList<String>();
+	try{
+	    Scanner s = new Scanner(new File("D:\\doc.txt"));          
+		while (s.hasNext()){
+		    list.add(s.next());
+		}
+		s.close();
+	}catch(Exception e){
+	    System.err.println(e.getMessage());
+	}        
+	System.out.println(list);
 	}
 }
